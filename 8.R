@@ -1,0 +1,6 @@
+weight<-c(56,91,57,76,72)
+height<-c(136,179,170,152,131)
+relation<-lm(height~weight)
+x<-data.frame(x=170)
+print(predict(relation,x))
+plot(height,weight,col="red",main="Height and Weight regression",abline(lm(weight~height),xlab="Height",ylab="Weight"))
